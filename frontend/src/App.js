@@ -1,13 +1,25 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import Header from './components/Header';
+import Search from './components/Search';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>Images Gallery</h1>
-      </div>
-    );
-  }
+
+const App = () => {
+
+  const [ word, setWord ] = useState("");
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    console.log(word);
+  };
+
+  return (
+    <div className="App">
+      <Header title="Images Gallery"></Header>
+      <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit} />
+    </div>
+  );
 }
 
 export default App;
