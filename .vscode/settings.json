@@ -4,6 +4,7 @@
         "javascript",
         "javascriptreact"
     ],
-    "eslint.alwaysShowStatus": true,
-    "eslint.lintTask.enable": true
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint":true
+    }
 }
